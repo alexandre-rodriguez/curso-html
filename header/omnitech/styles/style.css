@@ -107,6 +107,7 @@ header {
    }
 
    .container {
+      position: relative;
       padding: 0 20px;
       display: grid;
       grid-template-areas: 
@@ -156,10 +157,25 @@ header {
    }
 
    .nav-bar {
-      display: none;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 80px);
+      background-color: #2980b9;
    }
 
- 
+   .nav-bar ul {
+      justify-content: center;
+      grid-auto-flow: row;
+      grid-gap: 80px;
+
+   }
+
+   .nav-bar li {
+      text-align: center;
+   }
+
 }
 
 main {
