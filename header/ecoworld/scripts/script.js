@@ -17,36 +17,16 @@ function toggleNavBar() {
    }
 }
 
-const $extLink = document.querySelectorAll('.ext-link')[0];
-$extLink.addEventListener('click', openLink, false);
+const $intLinks = document.querySelectorAll('.int-link a');
 
-function openLink() {
-   window.open('https://www.blogger.com', '_blank');
-}
+$intLinks.forEach(function (cur) {
+   cur.addEventListener('click', function (evt) {
+      evt.preventDefault();
 
-/*
-const $intLink = document.querySelectorAll('.int-link')[2];
-$intLink.addEventListener('click', scrollToSect, false);
+      const topo = document.querySelector(cur.getAttribute('href')).offsetTop;
 
-const $transparenciaSect = document.querySelector('#transparencia');
-
-function scrollToSect() {
-
-   window.scrollTo({
-      top: $transparenciaSect.offsetTop - $navBar.offsetHeight,
-      left: '0',
-      behavior: 'smooth'
-   })
-}
-*/
-
-const $intLinks = document.querySelectorAll('.int-link');
-const $sectArr = document.querySelectorAll('main section');
-
-$intLinks.forEach(function (cur, idx) {
-   cur.addEventListener('click', function () {
       window.scrollTo({
-         top: $sectArr[idx].offsetTop - $navBar.offsetHeight,
+         top: topo - $navBar.offsetHeight,
          left: '0',
          behavior: 'smooth'
       });
