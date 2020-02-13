@@ -10,8 +10,6 @@ function toggleHeader() {
       $header.classList.remove('max-header');
       $header.classList.add('min-header');
 
-      $logo.firstElementChild.setAttribute('src', 'imgs/omnitech-logo-2.png');
-
       $logo.classList.remove('max-logo');
       $logo.classList.add('min-logo');
 
@@ -25,8 +23,6 @@ function toggleHeader() {
    } else if (window.pageYOffset <= 60 && $header.classList.contains('min-header')) {
       $header.classList.remove('min-header');
       $header.classList.add('max-header');
-
-      $logo.firstElementChild.setAttribute('src', 'imgs/omnitech-logo-1.png')
 
       $logo.classList.remove('min-logo');
       $logo.classList.add('max-logo');

@@ -51,16 +51,18 @@ header {
    grid-area: lgo;
 }
 
-.logo img {
+.logo svg {
    transition: all 0.4s ease-out;
 }
 
-.max-logo img {
+.max-logo svg {
    width: 320px;
+   fill: #c5eff7;
 }
 
-.min-logo img {
+.min-logo svg {
    width: 280px;
+   fill: #2574a9;
 }
 
 .nav-bar {
@@ -155,11 +157,11 @@ header {
          "lgo ... mnu";
    }
 
-   .max-logo img {
+   .max-logo svg {
       width: 220px;
    }
 
-   .min-logo img {
+   .min-logo svg {
       width: 180px;
    }
 
