@@ -76,9 +76,24 @@ header {
 }
 
 .nav-bar a {
+   position: relative;
    font-family: "Taxi Driver";
    text-transform: uppercase;
    transition: all 0.4s ease-out;
+}
+
+.nav-bar a:hover::before {
+   content: '';
+   position: absolute;
+   top: -10px;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   background-color: currentColor;
+}
+
+.nav-bar a::after {
+   content: '';
 }
 
 .max-nav a{
