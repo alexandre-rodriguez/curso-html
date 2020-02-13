@@ -1,6 +1,7 @@
 const $header = document.querySelector('header');
 const $logo = document.querySelectorAll('.logo')[0];
 const $navBar = document.querySelectorAll('.nav-bar')[0];
+const $menu = document.querySelectorAll('.menu')[0];
 
 window.addEventListener('scroll', toggleHeader, false);
 
@@ -17,6 +18,10 @@ function toggleHeader() {
       $navBar.classList.remove('max-nav');
       $navBar.classList.add('min-nav');
 
+      $menu.firstElementChild.classList.remove('max-hamburger');
+      $menu.firstElementChild.classList.add('min-hamburger');
+
+
    } else if (window.pageYOffset <= 60 && $header.classList.contains('min-header')) {
       $header.classList.remove('min-header');
       $header.classList.add('max-header');
@@ -29,10 +34,13 @@ function toggleHeader() {
       $navBar.classList.remove('min-nav');
       $navBar.classList.add('max-nav');
 
+      $menu.firstElementChild.classList.remove('min-hamburger');
+      $menu.firstElementChild.classList.add('max-hamburger');
+
    }
 }
 
-const $menu = document.querySelectorAll('.menu')[0];
+
 $menu.addEventListener('click', toggleMenu, false);
 
 var isOpen = false;
