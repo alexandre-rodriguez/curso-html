@@ -97,6 +97,37 @@ header {
    background-color:#cae1f1;
 }
 
+@media(max-width: 768px) {
+   .max-header {
+      height: 80px;
+   }
+
+   .min-header {
+      height: 60px;
+   }
+
+   .container {
+      padding: 0 20px;
+      display: grid;
+      grid-template-areas: 
+         "lgo ... nav";
+   }
+
+   .max-logo img {
+      width: 220px;
+   }
+
+   .min-logo img {
+      width: 180px;
+   }
+
+   .nav-bar {
+      display: none;
+   }
+
+ 
+}
+
 main {
    font-size: 20px;
 }
