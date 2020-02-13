@@ -163,6 +163,13 @@ header {
       width: 100%;
       height: calc(100vh - 80px);
       background-color: #2980b9;
+
+      transform: translateX(-100%);
+      transition: all 0.4s ease-out;
+   }
+   
+   .menu-opened {
+      transform: translateX(0);
    }
 
    .nav-bar ul {

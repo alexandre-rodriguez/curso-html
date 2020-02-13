@@ -32,3 +32,17 @@ function toggleHeader() {
    }
 }
 
+const $menu = document.querySelectorAll('.menu')[0];
+$menu.addEventListener('click', toggleMenu, false);
+
+var isOpen = false;
+function toggleMenu() {
+   if (!isOpen) {
+      $navBar.classList.add('menu-opened');
+      isOpen = true;
+   } else {
+      $navBar.classList.remove('menu-opened');
+      isOpen = false;
+   }
+
+}
